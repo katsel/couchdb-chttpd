@@ -25,6 +25,7 @@ url_handler(<<"_replicate">>)      -> fun chttpd_misc:handle_replicate_req/1;
 url_handler(<<"_uuids">>)          -> fun chttpd_misc:handle_uuids_req/1;
 url_handler(<<"_session">>)        -> fun chttpd_auth:handle_session_req/1;
 url_handler(<<"_up">>)             -> fun chttpd_misc:handle_up_req/1;
+url_handler(<<"_helloworld">>)     -> fun chttpd_helloworld:handle_req/1;
 url_handler(_) -> no_match.
 
 db_handler(<<"_view_cleanup">>) -> fun chttpd_db:handle_view_cleanup_req/2;
